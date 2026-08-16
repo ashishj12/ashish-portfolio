@@ -5,6 +5,7 @@ export const profile = {
   status: "Open to opportunities",
   email: "jangidashish38@gmail.com",
   phone: "+91 8690869917",
+  location: "Jaipur, Rajasthan",
   linkedin: "https://linkedin.com/in/ashish-kumar86j",
   github: "https://github.com/ashishj12",
   summary:
