@@ -10,7 +10,7 @@ export default function Stack() {
       id="stack"
       className="relative py-24 md:py-32 border-t border-[var(--line)] blueprint-grid-fine"
     >
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <SectionHeading
           method="GET"
           path="/stack"

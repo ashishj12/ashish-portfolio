@@ -10,7 +10,7 @@ export default function Experience() {
       id="experience"
       className="relative py-24 md:py-32 border-t border-[var(--line)]"
     >
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <SectionHeading
           method="GET"
           path="/experience"
@@ -31,15 +31,21 @@ export default function Experience() {
             >
               <span className="absolute -left-8 md:-left-10 top-1.5 h-2.5 w-2.5 rounded-full bg-[var(--accent)] ring-4 ring-[var(--bg)]" />
 
-              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 mb-3">
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-x-6 gap-y-2 mb-3">
                 <div>
-                  <h3 className="font-[family-name:var(--font-display)] text-xl md:text-2xl font-semibold tracking-tight">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg sm:text-xl md:text-2xl font-semibold tracking-tight">
                     {job.role}
                   </h3>
                   <p className="text-[var(--accent-dim)]">{job.company}</p>
                 </div>
-                <p className="mono-eyebrow text-[var(--ink-faint)]">
-                  {job.period} · {job.location}
+                <p className="mono-eyebrow text-xs sm:text-sm text-[var(--ink-faint)] break-words">
+                  <span className="hidden sm:inline">
+                    {job.period} · {job.location}
+                  </span>
+                  <span className="sm:hidden">{job.period}</span>
+                  <span className="sm:hidden block text-xs">
+                    {job.location}
+                  </span>
                 </p>
               </div>
 

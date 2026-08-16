@@ -17,7 +17,7 @@ export default function Projects() {
       id="work"
       className="relative py-24 md:py-32 border-t border-[var(--line)]"
     >
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <SectionHeading
           method="GET"
           path="/work"
@@ -55,7 +55,7 @@ export default function Projects() {
                 />
               </div>
 
-              <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-semibold tracking-tight mb-1.5">
+              <h3 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight mb-1.5">
                 {p.name}
               </h3>
               <p className="text-[var(--accent-dim)] text-sm mb-4">{p.tag}</p>

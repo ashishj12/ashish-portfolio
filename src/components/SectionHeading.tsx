@@ -33,7 +33,7 @@ export default function SectionHeading({
         <span className="text-[var(--ink-faint)]">{path}</span>
         <span className="dashed-line w-10" />
       </p>
-      <h2 className="font-[family-name:var(--font-display)] font-semibold text-3xl md:text-4xl tracking-tight">
+      <h2 className="font-[family-name:var(--font-display)] font-semibold text-2xl sm:text-3xl md:text-4xl tracking-tight">
         {title}
       </h2>
       {description && (

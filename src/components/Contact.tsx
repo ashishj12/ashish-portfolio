@@ -32,7 +32,7 @@ export default function Contact() {
       id="contact"
       className="relative py-24 md:py-32 border-t border-[var(--line)] blueprint-grid"
     >
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="font-[family-name:var(--font-display)] font-semibold text-4xl md:text-6xl tracking-tight text-balance max-w-2xl"
+          className="font-[family-name:var(--font-display)] font-semibold text-2xl sm:text-3xl md:text-5xl lg:text-6xl tracking-tight text-balance max-w-2xl"
         >
           Let&apos;s build something reliable.
         </motion.h2>

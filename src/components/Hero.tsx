@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden blueprint-grid"
+      className="relative pt-28 pb-16 sm:pt-36 md:pt-44 lg:pt-48 pb-20 md:pb-28 overflow-hidden blueprint-grid"
     >
       {/* Ambient blueprint glow */}
       <div
@@ -20,8 +20,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 md:px-8">
-        <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-12 md:gap-8 items-start">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+        <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-6 sm:gap-8 md:gap-8 items-start">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -37,7 +37,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="font-[family-name:var(--font-display)] font-semibold text-[13vw] leading-[0.95] tracking-tight text-balance md:text-[5.2rem] lg:text-[5.8rem]"
+              className="font-[family-name:var(--font-display)] font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-[5.8rem] leading-[1.1] sm:leading-[1.05] md:leading-[0.95] tracking-tight text-balance"
             >
               Backend
               <br />
@@ -50,7 +50,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-8 max-w-md text-[var(--ink-dim)] text-lg leading-relaxed"
+              className="mt-6 sm:mt-8 max-w-md text-[var(--ink-dim)] text-sm sm:text-base md:text-lg leading-relaxed"
             >
               {profile.summary}
             </motion.p>

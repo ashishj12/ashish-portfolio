@@ -31,7 +31,7 @@ export default function JsonResponse() {
   }, [typedChars, visibleLines]);
 
   return (
-    <div className="frame-marks rounded-lg border border-[var(--line)] bg-[var(--panel)]/80 backdrop-blur-sm p-5 md:p-6 font-[family-name:var(--font-mono)] text-[13px] leading-relaxed shadow-[0_0_0_1px_rgba(127,224,211,0.03)]">
+    <div className="frame-marks rounded-lg border border-[var(--line)] bg-[var(--panel)]/80 backdrop-blur-sm p-4 sm:p-5 md:p-6 font-[family-name:var(--font-mono)] text-xs sm:text-sm md:text-[13px] leading-relaxed shadow-[0_0_0_1px_rgba(127,224,211,0.03)]">
       <div className="flex items-center justify-between pb-4 mb-4 border-b border-[var(--line)]">
         <div className="flex gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[var(--line)]" />
