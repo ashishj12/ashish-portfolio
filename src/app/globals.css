@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0e1826;
+  --bg-soft: #132234;
+  --panel: #101d2c;
+  --ink: #eaf1f3;
+  --ink-dim: #93aabc;
+  --ink-faint: #5c7387;
+  --line: #24384e;
+  --line-soft: #1a2c3f;
+  --accent: #7fe0d3;
+  --accent-dim: #4c8f86;
+  --amber: #f0a94e;
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-manrope);
+  --font-mono: var(--font-jbmono);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0a1119;
+}
+
+/* Blueprint grid background */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.blueprint-grid-fine {
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Corner crosshair / drafting-mark frame */
+.frame-marks {
+  position: relative;
+}
+.frame-marks::before,
+.frame-marks::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+.frame-marks::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid var(--accent-dim);
+  border-left: 1px solid var(--accent-dim);
+}
+.frame-marks::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid var(--accent-dim);
+  border-right: 1px solid var(--accent-dim);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.mono-eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+}
+
+.dashed-line {
+  background-image: linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px);
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+}
+
+.dashed-line-v {
+  background-image: linear-gradient(180deg, var(--line) 0 6px, transparent 6px 12px);
+  background-size: 1px 12px;
+  background-repeat: repeat-y;
+  width: 1px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
