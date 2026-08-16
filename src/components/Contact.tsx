@@ -5,15 +5,33 @@ import { Mail, Phone, Linkedin, Github, ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/resume";
 
 const links = [
-  { label: "Email", value: profile.email, href: `mailto:${profile.email}`, icon: Mail },
-  { label: "Phone", value: profile.phone, href: `tel:${profile.phone.replace(/\s+/g, "")}`, icon: Phone },
-  { label: "LinkedIn", value: "/ashish-kumar86j", href: profile.linkedin, icon: Linkedin },
+  {
+    label: "Email",
+    value: profile.email,
+    href: `mailto:${profile.email}`,
+    icon: Mail,
+  },
+  {
+    label: "Phone",
+    value: profile.phone,
+    href: `tel:${profile.phone.replace(/\s+/g, "")}`,
+    icon: Phone,
+  },
+  {
+    label: "LinkedIn",
+    value: "/ashish-kumar86j",
+    href: profile.linkedin,
+    icon: Linkedin,
+  },
   { label: "GitHub", value: "/ashishj12", href: profile.github, icon: Github },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 md:py-32 border-t border-[var(--line)] blueprint-grid">
+    <section
+      id="contact"
+      className="relative py-24 md:py-32 border-t border-[var(--line)] blueprint-grid"
+    >
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -44,8 +62,8 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-5 max-w-lg text-[var(--ink-dim)] text-lg leading-relaxed"
         >
-          Looking for a backend or full-stack engineer role. Fastest reply is by email - usually
-          within a day.
+          Looking for a backend or full-stack engineer role. Fastest reply is by
+          email - usually within a day.
         </motion.p>
 
         <div className="mt-12 grid sm:grid-cols-2 gap-px bg-[var(--line)] border border-[var(--line)] rounded-lg overflow-hidden max-w-2xl">
@@ -54,7 +72,9 @@ export default function Contact() {
               key={l.label}
               href={l.href}
               target={l.href.startsWith("http") ? "_blank" : undefined}
-              rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              rel={
+                l.href.startsWith("http") ? "noopener noreferrer" : undefined
+              }
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -64,7 +84,9 @@ export default function Contact() {
               <span className="flex items-center gap-3">
                 <l.icon size={18} className="text-[var(--accent)] shrink-0" />
                 <span>
-                  <span className="block mono-eyebrow text-[var(--ink-faint)]">{l.label}</span>
+                  <span className="block mono-eyebrow text-[var(--ink-faint)]">
+                    {l.label}
+                  </span>
                   <span className="text-[var(--ink)] text-sm">{l.value}</span>
                 </span>
               </span>

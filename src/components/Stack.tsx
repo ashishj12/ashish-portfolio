@@ -6,7 +6,10 @@ import SectionHeading from "./SectionHeading";
 
 export default function Stack() {
   return (
-    <section id="stack" className="relative py-24 md:py-32 border-t border-[var(--line)] blueprint-grid-fine">
+    <section
+      id="stack"
+      className="relative py-24 md:py-32 border-t border-[var(--line)] blueprint-grid-fine"
+    >
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <SectionHeading
           method="GET"
@@ -25,10 +28,15 @@ export default function Stack() {
               transition={{ duration: 0.45, delay: (i % 3) * 0.06 }}
               className="bg-[var(--bg)] p-6 hover:bg-[var(--panel)] transition-colors"
             >
-              <p className="mono-eyebrow text-[var(--accent-dim)] mb-4">{group.group}</p>
+              <p className="mono-eyebrow text-[var(--accent-dim)] mb-4">
+                {group.group}
+              </p>
               <ul className="space-y-2.5">
                 {group.items.map((item) => (
-                  <li key={item} className="text-[var(--ink)] flex items-baseline gap-2.5">
+                  <li
+                    key={item}
+                    className="text-[var(--ink)] flex items-baseline gap-2.5"
+                  >
                     <span className="text-[var(--accent)] text-xs">▸</span>
                     <span>{item}</span>
                   </li>

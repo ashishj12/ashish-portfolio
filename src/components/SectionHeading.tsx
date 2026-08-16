@@ -14,7 +14,11 @@ export default function SectionHeading({
   description?: string;
 }) {
   const methodColor =
-    method === "GET" ? "text-[var(--accent)]" : method === "POST" ? "text-[var(--amber)]" : "text-[var(--ink-dim)]";
+    method === "GET"
+      ? "text-[var(--accent)]"
+      : method === "POST"
+        ? "text-[var(--amber)]"
+        : "text-[var(--ink-dim)]";
 
   return (
     <motion.div
@@ -33,7 +37,9 @@ export default function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className="mt-3 max-w-lg text-[var(--ink-dim)] leading-relaxed">{description}</p>
+        <p className="mt-3 max-w-lg text-[var(--ink-dim)] leading-relaxed">
+          {description}
+        </p>
       )}
     </motion.div>
   );

@@ -113,7 +113,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "8 missions across 5 difficulty levels, each with quizzes, flashcards, and an inline AI tutor scoped to that mission's content",
-      "Hand-written repository layer (src/lib/repo.ts) over better-sqlite3 - server-side enforced publish/enabled checks, unreachable by learners even via direct URL",
+      "Hand-written repository layer over better-sqlite3 - server-side enforced publish/enabled checks, unreachable by learners even via direct URL",
       "Single AI provider function with an 8s timeout: live Groq call on success, deterministic topic-aware mock on any failure - the app never shows a broken screen",
       "Idempotent badge awards and quiz scoring, with progress persisted client-side via Zustand and a browser session id - no login required",
       "Passcode-gated admin panel to create/edit missions, quizzes, and flashcards, with draft/published and enabled/disabled toggles and a learner-preview mode",

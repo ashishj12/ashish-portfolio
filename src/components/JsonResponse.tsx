@@ -38,7 +38,9 @@ export default function JsonResponse() {
           <span className="h-2.5 w-2.5 rounded-full bg-[var(--line)]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent-dim)]" />
         </div>
-        <span className="text-[var(--ink-faint)] text-xs">GET /me → 200 OK</span>
+        <span className="text-[var(--ink-faint)] text-xs">
+          GET /me → 200 OK
+        </span>
       </div>
 
       <div className="text-[var(--ink-dim)]">
@@ -51,17 +53,26 @@ export default function JsonResponse() {
             const shown = isCurrent ? fullText.slice(0, typedChars) : fullText;
             return (
               <div key={line.k} className="min-h-[1.5em]">
-                <span className="text-[var(--accent)]">{shown.split(":")[0]}</span>
+                <span className="text-[var(--accent)]">
+                  {shown.split(":")[0]}
+                </span>
                 {shown.includes(":") && (
                   <>
-                    :<span className="text-[var(--ink)]">{shown.split(":").slice(1).join(":")}</span>
+                    :
+                    <span className="text-[var(--ink)]">
+                      {shown.split(":").slice(1).join(":")}
+                    </span>
                   </>
                 )}
                 {isCurrent && typedChars < fullText.length && (
                   <span className="inline-block w-[7px] h-[13px] bg-[var(--accent)] ml-0.5 align-middle animate-pulse" />
                 )}
                 {i < lines.length - 1 && !isCurrent ? "," : ""}
-                {i < lines.length - 1 && isCurrent && typedChars >= fullText.length ? "," : ""}
+                {i < lines.length - 1 &&
+                isCurrent &&
+                typedChars >= fullText.length
+                  ? ","
+                  : ""}
               </div>
             );
           })}

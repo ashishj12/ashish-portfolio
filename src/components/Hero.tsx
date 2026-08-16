@@ -14,7 +14,10 @@ export default function Hero() {
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--accent-dim), transparent 65%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, var(--accent-dim), transparent 65%)",
+        }}
       />
 
       <div className="relative mx-auto max-w-6xl px-6 md:px-8">

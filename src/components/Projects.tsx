@@ -13,7 +13,10 @@ const methodColor: Record<string, string> = {
 
 export default function Projects() {
   return (
-    <section id="work" className="relative py-24 md:py-32 border-t border-[var(--line)]">
+    <section
+      id="work"
+      className="relative py-24 md:py-32 border-t border-[var(--line)]"
+    >
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <SectionHeading
           method="GET"
@@ -37,10 +40,14 @@ export default function Projects() {
             >
               <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                 <div className="flex items-center gap-3 mono-eyebrow">
-                  <span className={`px-2 py-0.5 rounded border text-xs ${methodColor[p.method]}`}>
+                  <span
+                    className={`px-2 py-0.5 rounded border text-xs ${methodColor[p.method]}`}
+                  >
                     {p.method}
                   </span>
-                  <span className="text-[var(--ink-faint)]">/projects/{p.slug}</span>
+                  <span className="text-[var(--ink-faint)]">
+                    /projects/{p.slug}
+                  </span>
                 </div>
                 <ArrowUpRight
                   size={20}
@@ -52,11 +59,16 @@ export default function Projects() {
                 {p.name}
               </h3>
               <p className="text-[var(--accent-dim)] text-sm mb-4">{p.tag}</p>
-              <p className="text-[var(--ink-dim)] leading-relaxed mb-5 max-w-2xl">{p.description}</p>
+              <p className="text-[var(--ink-dim)] leading-relaxed mb-5 max-w-2xl">
+                {p.description}
+              </p>
 
               <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
                 {p.highlights.map((h) => (
-                  <li key={h} className="text-sm text-[var(--ink-dim)] flex gap-2.5">
+                  <li
+                    key={h}
+                    className="text-sm text-[var(--ink-dim)] flex gap-2.5"
+                  >
                     <span className="text-[var(--accent)] shrink-0">▸</span>
                     <span>{h}</span>
                   </li>

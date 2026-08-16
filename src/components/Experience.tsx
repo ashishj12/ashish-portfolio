@@ -6,9 +6,16 @@ import SectionHeading from "./SectionHeading";
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-24 md:py-32 border-t border-[var(--line)]">
+    <section
+      id="experience"
+      className="relative py-24 md:py-32 border-t border-[var(--line)]"
+    >
       <div className="mx-auto max-w-6xl px-6 md:px-8">
-        <SectionHeading method="GET" path="/experience" title="Where I've worked." />
+        <SectionHeading
+          method="GET"
+          path="/experience"
+          title="Where I've worked."
+        />
 
         <div className="relative pl-8 md:pl-10">
           <div className="absolute left-0 top-2 bottom-2 dashed-line-v" />
@@ -38,7 +45,10 @@ export default function Experience() {
 
               <ul className="space-y-2.5 max-w-2xl">
                 {job.points.map((pt) => (
-                  <li key={pt} className="text-[var(--ink-dim)] leading-relaxed flex gap-2.5">
+                  <li
+                    key={pt}
+                    className="text-[var(--ink-dim)] leading-relaxed flex gap-2.5"
+                  >
                     <span className="text-[var(--accent)] shrink-0">▸</span>
                     <span>{pt}</span>
                   </li>
