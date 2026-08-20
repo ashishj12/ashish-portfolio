@@ -68,7 +68,7 @@ export default function Hero() {
                 View projects
               </a>
               <a
-                href="/Ashish_Kumar_Resume.pdf"
+                href="/Ashish-Resume.pdf"
                 download
                 className="px-5 py-3 rounded-md border border-[var(--line)] text-sm text-[var(--ink)] hover:border-[var(--accent-dim)] transition-colors focus-ring"
               >
